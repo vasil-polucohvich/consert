@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Концернтна діяльність</title>
+    <meta name="description" content="Коцертна діяльність артистів україни." />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+
+    <link rel="stylesheet" href="css/main.min.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-container">
+        <div class="header-top">
+          <a href="#" class="logo" lang="en">g&amp;g</a>
+          <nav class="menu">
+            <ul class="list-items">
+              <li class="list-item">
+                <a class="link-item" href="#gurt">Про гурт</a>
+              </li>
+              <li class="list-item">
+                <a class="link-item" href="#concert">Концерти</a>
+              </li>
+              <li class="list-item">
+                <a class="link-item" href="#artist">Галерея</a>
+              </li>
+              <li class="list-item">
+                <a class="link-item" href="#contact">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
+          <nav class="mobile-menu" id="mobileMenu">
+            <a href="#gurt">ПРО ГУРТ</a>
+            <a href="#concert">КОНЦЕРТИ</a>
+            <a href="#artist">ГАЛЕРЕЯ</a>
+            <a href="#contact">КОНТАКТИ</a>
+          </nav>
+        </div>
+        <div class="header-body">
+          <div class="container">
+            <h1 class="title" id="gurt">Гурт &laquo;Грим та Грім&raquo;</h1>
+            <p class="text">Справжній український рок, який гуркоче в серці.</p>
+            <p>
+              Грим та Грім &mdash; це поєднання
+              <span class="text-blue">потужних</span> гітарних рифів, чесних
+              текстів і вибухової енергії сцени. Ми граємо для тих, хто цінує
+              звук, свободу та силу музики.
+            </p>
+            <p class="description">
+              <span class="text-blue">Наші концерти </span> &mdash; це завжди
+              контакт з залом, драйв і емоції.Приєднуйся до нас на найближчих
+              виступах і відчуй цей саунд наживо.
+            </p>
+            <button class="button ticket-button" id="openModalBtn">
+              заказати квиток
+            </button>
+            <div id="orderModal" class="modal">
+              <div class="modal-content">
+                <span class="close-btn">&times;</span>
+                <h2>🎫 Замовлення квитка</h2>
+                <p>Заповніть форму, і наш менеджер зв'яжеться з вами.</p>
+
+                <form id="ticketOrderForm">
+                  <div class="form-group">
+                    <label for="userName">Ваше ім'я:</label>
+                    <input
+                      type="text"
+                      id="userName"
+                      name="userName"
+                      required
+                      minlength="2"
+                    />
+                    <div class="error-message" id="errorName"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="userPhone">Номер телефону:</label>
+                    <input
+                      type="tel"
+                      id="userPhone"
+                      name="userPhone"
+                      required
+                      pattern="[0-9]{10,}"
+                      title="Введіть мінімум 10 цифр (тільки цифри)."
+                    />
+                    <div class="error-message" id="errorPhone"></div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="userEmail">E-mail (за бажанням):</label>
+                    <input type="email" id="userEmail" name="userEmail" />
+                  </div>
+
+                  <button type="submit" class="submit-btn">
+                    Підтвердити замовлення
+                  </button>
+
+                  <div
+                    id="successMessage"
+                    class="success-message"
+                    style="display: none"
+                  >
+                    ✅ Ваше замовлення прийнято! Чекайте на дзвінок.
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="content">
+      <section class="concerts" id="concert">
+        <h2>Найближчі концерти</h2>
+
+        <div class="table">
+          <div class="row head">
+            <div>Місто / Заклад</div>
+            <div>К-сть місць</div>
+            <div>Дата і час</div>
+            <div></div>
+          </div>
+
+          <div class="row">
+            <div>Київ — Docker-G Pub</div>
+            <div>250</div>
+            <div>25.10.2025, 19:00</div>
+            <div><button class="buy-btn">Замовити квиток</button></div>
+          </div>
+
+          <div class="row">
+            <div>Львів — !FESTrepublic</div>
+            <div>400</div>
+            <div>01.11.2025, 20:00</div>
+            <div><button class="buy-btn">Замовити квиток</button></div>
+          </div>
+
+          <div class="row">
+            <div>Одеса — Зелений театр</div>
+            <div>700</div>
+            <div>09.11.2025, 19:30</div>
+            <div><button class="buy-btn">Замовити квиток</button></div>
+          </div>
+
+          <div class="row">
+            <div>Харків — ArtZavod</div>
+            <div>500</div>
+            <div>16.11.2025, 19:00</div>
+            <div><button class="buy-btn">Замовити квиток</button></div>
+          </div>
+        </div>
+      </section>
+      <section class="artist" id="artist">
+        <div class="container">
+          <h2 class="heading-2">Учасники гурту</h2>
+          <div class="consert-box">
+            <div class="card">
+              <img
+                src="img/gitara.jpg"
+                width="446"
+                height="211"
+                alt="виконавець Максим"
+              />
+              <p class="card-avtor">Максим гітара</p>
+            </div>
+            <div class="card">
+              <img
+                src="img/vocal.jpg"
+                width="446"
+                height="211"
+                alt="виконавиця Олена"
+              />
+              <p class="card-avtor">Олена вокал</p>
+            </div>
+            <div class="card">
+              <img
+                src="img/baraban.jpg"
+                width="446"
+                height="211"
+                alt="виконавець Тарас"
+              />
+              <p class="card-avtor">Тарас барабани</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Модальне вікно -->
+      <div class="modal" id="ticketModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+
+          <h3>Замовлення квитка</h3>
+
+          <div class="modal-info">
+            <p>
+              <strong>Місце проведення:</strong> <span id="modalPlace"></span>
+            </p>
+            <p><strong>Дата і час:</strong> <span id="modalDate"></span></p>
+          </div>
+
+          <button id="confirmBtn" class="confirm">
+            Підтвердити замовлення
+          </button>
+        </div>
+      </div>
+      <section class="history">
+        <div class="container">
+          <h2>Наша історія</h2>
+          <img
+            class="history-img"
+            src="img/consert.jpg"
+            width="446"
+            height="211"
+            alt="концерт"
+          />
+
+          <p>
+            За роки нашої діяльності ми виступили на десятках сцен, від
+            невеликих клубів до великих фестивалів. Наша музика - це поєднання
+            традиційного року з сучасними елементами,що робить її унікальною та
+            впізнаваною.Ми не боїмось експериментувати з звуком, додаючи
+            електронні елементи або народні інструменти.
+          </p>
+          <p>
+            За роки нашої діяльності ми виступили на десятках сцен, від
+            невеликих клубів до великих фестивалів. Наша музика - це поєднання
+            традиційного року з сучасними елементами,що робить її унікальною та
+            впізнаваною.Ми не боїмось експериментувати з звуком, додаючи
+            електронні елементи або народні інструменти.
+          </p>
+          <p>
+            Кожен наш виступ - це не просто концерт, а справжня подія, де ми
+            ділимося своєю енергією з глядачами та створюємо неповторну
+            атмосферу.Ми віримо, що музика має силу об'єднувати людей,
+            створювати спільноти та надихати на зміни.
+          </p>
+          <p>
+            Наш колектив складається з досвідчених музикантів, кожен з яких
+            привносить свій унікальний стиль та бачення.Максим створює
+            неймовірні гітарні рифи, Олена зачаровує своїм вокалом, а Тарас
+            тримає ритм, який змушує серця битися в унісон з музикою.
+          </p>
+        </div>
+      </section>
+
+      <section class="card-form" id="contact">
+        <div class="container">
+          <h2 class="text-center">Зв'яжись з нами</h2>
+          <p class="text-center">Хочеш заказати виступ або маєш питання?Пиши</p>
+          <div class="card-block">
+            <form method="get" class="form" id="contactForm" novalidate>
+              <div class="row">
+                <div>
+                  <label for="name">Ім'я</label>
+                  <input
+                    id="name"
+                    type="text"
+                    class="input"
+                    placeholder="Ваше ім'я"
+                  />
+                  <div class="error" id="nameError">
+                    Введіть ім'я (мінімум 2 символи)
+                  </div>
+                </div>
+
+                <div>
+                  <label for="mail">Email</label>
+                  <input
+                    id="mail"
+                    type="email"
+                    class="input"
+                    placeholder="email@example.com"
+                  />
+                  <div class="error" id="emailError">
+                    Введіть коректний email
+                  </div>
+                </div>
+              </div>
+
+              <label for="message">Повідомлення</label>
+              <textarea
+                id="message"
+                rows="5"
+                placeholder="Розкажи про свої ідеї..."
+              ></textarea>
+              <div class="error" id="messageError">
+                Повідомлення має містити щонайменше 10 символів
+              </div>
+
+              <button type="submit">Відправити</button>
+            </form>
+            <div class="maps">
+              <p class="maps-title">Наше місцезнаходження</p>
+              <iframe
+                class="iframe"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7192.96928471092!2d30.536063484192894!3d50.401998535790774!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf4e367d1663%3A0x9ba07dbf7d7ce12d!2sFeodosiiska%20St%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1764232134915!5m2!1sen!2sua"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="copiraty">
+            &copy; &laquo;Грим та Грім&raquo; всі права захищені.
+          </div>
+
+          <ul class="footer-list">
+            <li class="footer-list-item"><a href="#">Instagram</a></li>
+            <li class="footer-list-item"><a href="#">YouTube</a></li>
+            <li class="footer-list-item"><a href="#">Facebbok</a></li>
+          </ul>
+        </div>
+        <div class="footer-body">
+          <ul class="footer-contacts">
+            <li>
+              <a class="contacts-link" href="mailto:booking@lotoplay"
+                >booking@lotoplay</a
+              >
+            </li>
+            <li>
+              <a class="contacts-link" href="tel:+380991234567"
+                >+38(099)123-45-67</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/scripts.min.js"></script>
+  </body>
+</html>
